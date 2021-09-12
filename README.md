@@ -1,24 +1,16 @@
 # vuex
 
-## Project setup
+## 获取state中的变量
+### 第一种
+在template中是不需要写this的 可以省略this的
+```js
+this.$store.state.count // count是变量名称
 ```
-yarn install
+### 第二种
+使用辅助函数 mapState
+```js
+import {mapState} from 'vuex'
+compute:{
+    ...mapState(['count'])
+}
 ```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
